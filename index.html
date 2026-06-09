@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>芮城花椒 · 惠众农业市场突围方案 | 2026年6月</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0a0f0a;
+  --surface: #141e14;
+  --surface2: #1a2a1a;
+  --border: #1e301e;
+  --text: #e8ede4;
+  --muted: #7d8f78;
+  --pri: #4ade80;
+  --pri2: #22c55e;
+  --pri-bg: rgba(74,222,128,0.08);
+  --sec: #f59e0b;
+  --sec-bg: rgba(245,158,11,0.08);
+  --red: #ef4444;
+  --red-bg: rgba(239,68,68,0.08);
+  --blue: #60a5fa;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', 'Noto Sans SC', -apple-system, sans-serif;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Hero ── */
+.hero {
+  background: radial-gradient(ellipse 70% 50% at 50% -10%, #1a3020 0%, #080f08 100%);
+  border-bottom: 1px solid var(--border);
+  padding: 70px 24px 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(74,222,128,0.06) 0%, transparent 70%);
+}
+.hero .loc {
+  font-size: 1em; color: var(--pri2); font-weight: 600;
+  margin-bottom: 16px; letter-spacing: 2px;
+}
+.hero h1 {
+  font-size: clamp(2em, 5vw, 3em);
+  font-weight: 900; letter-spacing: -0.02em;
+  line-height: 1.25; margin-bottom: 12px;
+}
+.hero h1 em { font-style: normal; color: var(--pri); }
+.hero .sub {
+  font-size: 1.1em; color: var(--muted);
+  max-width: 600px; margin: 0 auto 28px;
+}
+.hero .row {
+  display: flex; gap: 40px; justify-content: center;
+  flex-wrap: wrap;
+}
+.hero .row .it { text-align: center; }
+.hero .row .it .n { font-size: 2em; font-weight: 800; color: var(--pri); }
+.hero .row .it .l { font-size: 0.82em; color: var(--muted); margin-top: 2px; }
+
+/* ── Container ── */
+.container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+/* ── Section ── */
+.sec { margin: 56px 0; }
+.sec-t { font-size: 1.55em; font-weight: 700; margin-bottom: 6px; letter-spacing: -0.01em; }
+.sec-sub { color: var(--muted); margin-bottom: 24px; font-size: 0.93em; }
+
+/* ── Cards ── */
+.card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 14px; padding: 26px;
+}
+.card2 { background: var(--surface2); border: 1px solid var(--border); border-radius: 14px; padding: 26px; }
+
+/* ── Stat Row ── */
+.sr {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 14px; margin: 20px 0;
+}
+.sr .st {
+  background: var(--surface2); border: 1px solid var(--border);
+  border-radius: 12px; padding: 20px; text-align: center;
+}
+.sr .st .v { font-size: 1.8em; font-weight: 800; color: var(--pri); line-height: 1; margin-bottom: 5px; }
+.sr .st .l { font-size: 0.83em; color: var(--muted); }
+
+/* ── Tables ── */
+.tw { overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.93em; }
+th {
+  background: var(--surface2); padding: 13px 16px; text-align: left;
+  font-weight: 600; font-size: 0.83em; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap;
+}
+td { padding: 13px 16px; border-bottom: 1px solid var(--border); }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(74,222,128,0.03); }
+
+/* ── Action Cards ── */
+.act-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 16px;
+}
+.act {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 14px; padding: 24px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.act:hover { border-color: var(--pri); transform: translateY(-2px); }
+.act .num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px; background: var(--pri); color: #000;
+  border-radius: 8px; font-weight: 800; font-size: 0.9em; margin-bottom: 12px;
+}
+.act h4 { font-size: 1.05em; margin-bottom: 8px; }
+.act p { font-size: 0.9em; color: var(--muted); line-height: 1.65; }
+
+/* ── Callout ── */
+.co {
+  border-radius: 12px; padding: 20px 24px; margin: 18px 0;
+  font-size: 0.93em; line-height: 1.75;
+}
+.co-g { background: var(--pri-bg); border: 1px solid rgba(74,222,128,0.2); }
+.co-g h4 { color: var(--pri); }
+.co-a { background: var(--sec-bg); border: 1px solid rgba(245,158,11,0.2); }
+.co-a h4 { color: var(--sec); }
+.co-r { background: var(--red-bg); border: 1px solid rgba(239,68,68,0.2); }
+.co-r h4 { color: var(--red); }
+.co h4 { margin-bottom: 6px; font-size: 0.98em; }
+
+/* ── Tags ── */
+.tag {
+  display: inline-block; font-size: 0.76em; font-weight: 700;
+  padding: 3px 10px; border-radius: 6px; margin: 2px 4px 2px 0;
+}
+.tag-g { background: rgba(74,222,128,0.15); color: var(--pri); }
+.tag-a { background: rgba(245,158,11,0.15); color: var(--sec); }
+.tag-r { background: rgba(239,68,68,0.15); color: var(--red); }
+.tag-b { background: rgba(96,165,250,0.15); color: var(--blue); }
+
+/* ── 2-column ── */
+.g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 768px) { .g2 { grid-template-columns: 1fr; } }
+
+/* ── Flow ── */
+.flow {
+  display: flex; align-items: center; justify-content: center;
+  flex-wrap: wrap; gap: 10px; padding: 28px 0; font-weight: 600;
+}
+.flow .fs {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 10px; padding: 14px 20px; text-align: center; font-size: 0.88em;
+}
+.flow .fa { color: var(--pri); font-size: 1.3em; }
+
+/* ── Footer ── */
+footer {
+  text-align: center; padding: 46px 24px; color: var(--muted);
+  font-size: 0.83em; border-top: 1px solid var(--border); margin-top: 56px;
+}
+
+/* ── Checklist ── */
+.chk { list-style: none; padding: 0; }
+.chk li {
+  padding: 14px 14px 14px 40px; position: relative;
+  border-bottom: 1px solid var(--border); font-size: 0.93em;
+}
+.chk li:last-child { border-bottom: none; }
+.chk li::before {
+  content: '✓'; position: absolute; left: 10px; top: 14px;
+  color: var(--pri); font-weight: 800; font-size: 1.1em;
+}
+
+.high { color: var(--pri); font-weight: 700; }
+.price { font-family: 'SF Mono','JetBrains Mono',monospace; color: var(--pri); font-weight: 600; }
+</style>
+</head>
+<body>
+
+<!-- ═══════ HERO ═══════ -->
+<section class="hero">
+  <div class="loc">山西 · 运城 · 风陵渡</div>
+  <h1>芮城花椒<em>市场突围方案</em></h1>
+  <p class="sub">
+    惠众农业 · 大红袍花椒 · 国家地理标志产品<br>
+    从"只能卖给小贩"到"直接对接全国大客户"的<strong>实战打法</strong>
+  </p>
+  <div class="row">
+    <div class="it"><div class="n">12.5万亩</div><div class="l">芮城花椒种植面积</div></div>
+    <div class="it"><div class="n">6,700吨</div><div class="l">年产干椒</div></div>
+    <div class="it"><div class="n">30.9元/斤</div><div class="l">大红袍全国均价(2026.6)</div></div>
+    <div class="it"><div class="n">350亿+</div><div class="l">花椒油市场(2025预计)</div></div>
+  </div>
+</section>
+
+<div class="container">
+
+<!-- ═══════ 1. 现状 ═══════ -->
+<div class="sec">
+  <h2 class="sec-t">一、你们现在的处境（先看清楚问题在哪）</h2>
+  <p class="sec-sub">不是花椒不好，是渠道断了——你们卡在最底层</p>
+
+  <div class="flow">
+    <div class="fs">🌶️ 惠众农业<br><small>种花椒+初加工</small></div>
+    <div class="fa">→</div>
+    <div class="fs">🧑‍🌾 当地小贩<br><small>压价收购，赚第一道钱</small></div>
+    <div class="fa">→</div>
+    <div class="fs">🏭 河南调味品厂<br><small>深加工，赚第二道钱</small></div>
+    <div class="fa">→</div>
+    <div class="fs">🛒 终端市场<br><small>云贵川/全国，赚第三道钱</small></div>
+  </div>
+
+  <div class="g2" style="margin-top:16px;">
+    <div class="co co-r">
+      <h4>你们的痛点</h4>
+      <ul style="margin-left:16px;">
+        <li>只卖原料，不碰加工——<strong>利润被中间商吃掉70%+</strong></li>
+        <li>不知道自己的花椒什么特点（香型？麻度？），说不清卖点</li>
+        <li>开了调料厂但没销路——有加工能力没市场</li>
+        <li>不会找客户，只能等贩子上门</li>
+      </ul>
+    </div>
+    <div class="co co-g">
+      <h4>你们手里的好牌</h4>
+      <ul style="margin-left:16px;">
+        <li>国家地理标志 + 中国花椒之乡——有品牌故事可讲</li>
+        <li>大红袍花椒是市场认知度最高的品种</li>
+        <li>12.5万亩规模，产量够——能接大单</li>
+        <li>已有加工厂，能做深加工产品——就差销路</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ 2. 产品定位 ═══════ -->
+<div class="sec">
+  <h2 class="sec-t">二、先搞明白：你们的椒到底啥特点？</h2>
+  <p class="sec-sub">这是你们最需要搞清楚的事——不知道自己的产品，就没法跟客户说</p>
+
+  <div class="g2">
+    <div class="card">
+      <h4 style="color:var(--pri);margin-bottom:12px;">芮城大红袍 vs 四川花椒</h4>
+      <table style="font-size:0.9em;">
+        <tr><td style="width:35%;">品种</td><td><strong>大红袍花椒</strong>（北方品种群）</td></tr>
+        <tr><td>主要产区</td><td>山西芮城、陕西韩城、甘肃武都</td></tr>
+        <tr><td>外观</td><td>粒大、色红、油腺突出</td></tr>
+        <tr><td>核心特点</td><td><strong>香重于麻</strong>——北方椒一般香味浓郁，麻度适中</td></tr>
+        <tr><td>vs 四川青花椒</td><td>四川以麻为主，北方以香为主</td></tr>
+        <tr><td>vs 四川红花椒</td><td>四川红花椒麻味更重，芮城椒香味更突出</td></tr>
+        <tr><td>适用场景</td><td>炖肉、炒菜、火锅底料（提香）、花椒油</td></tr>
+      </table>
+    </div>
+    <div class="card2">
+      <h4 style="color:var(--sec);margin-bottom:12px;">马上要做的事</h4>
+      <ul style="margin-left:16px;font-size:0.93em;">
+        <li><strong>送检</strong>：把你们的花椒送到食品检测机构，测<span class="high">挥发油含量、麻度指数（山椒素）、水分</span></li>
+        <li>拿着检测报告，你就有了<strong>和别人不一样的证据</strong></li>
+        <li>如果检测出来"香味物质含量高于四川椒"——这就是你的<strong>核心卖点</strong></li>
+        <li>推荐检测机构：当地食药监局、SGS、华测检测</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="co co-g" style="margin-top:16px;">
+    <h4>一句话卖点（拿去直接用）</h4>
+    <p style="font-size:1.1em;font-weight:600;">"芮城大红袍——国家地理标志产品，粒大色红，<span style="color:var(--sec);">香味浓郁，麻度适中</span>，最适合做火锅底料和花椒油。"</p>
+  </div>
+</div>
+
+<!-- ═══════ 3. 市场行情 ═══════ -->
+<div class="sec">
+  <h2 class="sec-t">三、花椒市场价格行情（2026年6月）</h2>
+  <p class="sec-sub">让你心里有数——别人卖多少钱，你应该卖多少钱</p>
+
+  <div class="tw">
+    <table>
+      <thead>
+        <tr><th>品种</th><th>全国均价</th><th>产地价（参考）</th><th>终端零售价</th><th>价差空间</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>大红袍花椒（你们的）</strong></td>
+          <td class="price">30.9元/斤</td>
+          <td class="price">22-28元/斤</td>
+          <td>35-50元/斤</td>
+          <td><span class="tag tag-g">50-120%</span></td>
+        </tr>
+        <tr>
+          <td>陕西韩城大红袍</td>
+          <td class="price">28.32元/斤</td>
+          <td class="price">20-26元/斤</td>
+          <td>35-45元/斤</td>
+          <td><span class="tag tag-g">50-100%</span></td>
+        </tr>
+        <tr>
+          <td>甘肃武都大红袍</td>
+          <td class="price">33.5-40.67元/斤</td>
+          <td class="price">30-38元/斤</td>
+          <td>45-60元/斤</td>
+          <td><span class="tag tag-g">40-60%</span></td>
+        </tr>
+        <tr>
+          <td>四川红花椒</td>
+          <td class="price">31.42元/斤</td>
+          <td class="price">25-35元/斤</td>
+          <td>40-60元/斤</td>
+          <td><span class="tag tag-g">50-100%</span></td>
+        </tr>
+        <tr>
+          <td>四川青花椒</td>
+          <td class="price">26.28元/斤</td>
+          <td class="price">18-25元/斤</td>
+          <td>30-45元/斤</td>
+          <td><span class="tag tag-g">60-100%</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="co co-g" style="margin-top:16px;">
+    <h4>你们的定价策略</h4>
+    <p><strong>产地批发价定在 22-26元/斤</strong>（略低于韩城，突出性价比），<strong>深加工产品（花椒油/花椒粉）溢价100-300%</strong>。</p>
+    <p style="margin-top:4px;">陕西韩城是你们最直接的竞品，价格差不多，但你们有"黄河金三角"的地理故事可以讲。</p>
+  </div>
+</div>
+
+<!-- ═══════ 4. 大客户在哪 ═══════ -->
+<div class="sec">
+  <h2 class="sec-t">四、你的大客户到底在哪？</h2>
+  <p class="sec-sub">不是找不到客户，是你从来没去找过这些人</p>
+
+  <h3 style="color:var(--pri);margin:24px 0 14px;">客户类型一：火锅底料厂（最大买家）</h3>
+  <div class="tw">
+    <table>
+      <thead><tr><th>企业类型</th><th>代表</th><th>花椒用量</th><th>怎么联系</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>火锅底料龙头</td>
+          <td>颐海国际（海底捞底料供应商）、天味食品（大红袍/好人家）、红九九</td>
+          <td>数千吨/年</td>
+          <td>官网→采购部→寄样品→等验货</td>
+        </tr>
+        <tr>
+          <td>川渝火锅连锁</td>
+          <td>海底捞、小龙坎、大龙燚、蜀大侠、朱光玉</td>
+          <td>自建中央厨房采购</td>
+          <td>联系供应链/中央厨房采购部</td>
+        </tr>
+        <tr>
+          <td>中小火锅底料厂</td>
+          <td>重庆/成都/郑州 数千家中小底料厂</td>
+          <td>几十到几百吨/年</td>
+          <td><span class="tag tag-g">最现实的突破口</span> 1688搜索+上门拜访</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 style="color:var(--pri);margin:24px 0 14px;">客户类型二：调味品/食品企业</h3>
+  <div class="tw">
+    <table>
+      <thead><tr><th>领域</th><th>代表企业</th><th>用花椒做什么</th><th>怎么切入</th></tr></thead>
+      <tbody>
+        <tr><td>复合调味料</td><td>十三香、王守义、太太乐、海天</td><td>花椒粉、花椒油、调味包</td><td>采购部招标</td></tr>
+        <tr><td>卤制品</td><td>绝味鸭脖、周黑鸭、煌上煌</td><td>卤料包（花椒核心原料）</td><td>绝味年用花椒数千吨</td></tr>
+        <tr><td>方便食品</td><td>统一、康师傅、白象、今麦郎</td><td>藤椒/麻辣味调料包</td><td>调料包供应商切入</td></tr>
+        <tr><td>辣酱/下饭酱</td><td>老干妈、饭扫光、吉香居</td><td>花椒是核心配料</td><td>样品寄送+报价</td></tr>
+        <tr><td>预制菜</td><td>味知香、安井、千味央厨</td><td>麻辣口味预制菜</td><td>新兴市场，机会大</td></tr>
+        <tr><td>休闲零食</td><td>良品铺子、三只松鼠、百草味</td><td>麻辣味零食</td><td>OEM代工调料</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 style="color:var(--pri);margin:24px 0 14px;">客户类型三：花椒油/藤椒油厂家</h3>
+  <div class="g2">
+    <div class="co co-g">
+      <h4>为什么优先攻这个方向？</h4>
+      <p>花椒油市场2025年预计<strong>350亿+</strong>，年增长20%。你们自己有调料厂，可以直接做花椒油，利润比卖干花椒<strong>高3-5倍</strong>。</p>
+    </div>
+    <div class="co co-a">
+      <h4>头部玩家</h4>
+      <p>幺麻子（市占42%）、万佛食品（11%）、五丰黎红、金龙鱼、鲁花等。你们不用跟他们正面竞争，<strong>做他们的原料供应商</strong>或<strong>做区域品牌</strong>就行。</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ 5. 五大打法 ═══════ -->
+<div class="sec">
+  <h2 class="sec-t">五、怎么找客户？五大实战打法</h2>
+  <p class="sec-sub">每一条都是能立刻动手的，不是纸上谈兵</p>
+
+  <div class="act-grid">
+    <div class="act">
+      <div class="num">1</div>
+      <h4>1688批发网开店</h4>
+      <p><strong>最直接的B2B渠道。</strong>注册企业店铺，上架干花椒、花椒粉、花椒油。火锅底料厂、食品厂的采购每天都在1688搜供应商。年费几千块，拍好产品图，标明"产地直发""国家地理标志""支持验厂"。</p>
+      <p style="margin-top:6px;"><span class="tag tag-g">本周可做</span> <span class="tag tag-b">成本：低</span></p>
+    </div>
+
+    <div class="act">
+      <div class="num">2</div>
+      <h4>抖音直播带货（B端+ C端）</h4>
+      <p><strong>B端：</strong>拍工厂、拍花椒筛选过程、拍产地，标题"芮城花椒产地直供，火锅底料厂首选"——餐饮老板和采购会刷到。<strong>C端：</strong>小包装花椒、花椒油直接卖给家庭，利润远高于批发。</p>
+      <p style="margin-top:6px;"><span class="tag tag-g">本周可做</span> <span class="tag tag-b">案例：江津花椒电商部</span></p>
+    </div>
+
+    <div class="act">
+      <div class="num">3</div>
+      <h4>参加食品/火锅展会</h4>
+      <p>这是<strong>找大客户最快的方式</strong>。带样品、带检测报告、带报价单。以下是2026年重点展会：</p>
+      <ul style="margin-left:14px;margin-top:6px;font-size:0.88em;color:var(--muted);">
+        <li>上海国际调味品展（CFI）</li>
+        <li>上海火锅食材展（华食展）</li>
+        <li>重庆餐饮食材展</li>
+        <li>齐鲁火锅节（济南）</li>
+        <li>味动中国（武汉站）</li>
+      </ul>
+      <p style="margin-top:6px;"><span class="tag tag-a">月度可做</span> <span class="tag tag-b">成本：中</span></p>
+    </div>
+
+    <div class="act">
+      <div class="num">4</div>
+      <h4>直接拜访大客户采购部</h4>
+      <p>别等客户上门，直接去：</p>
+      <ul style="margin-left:14px;margin-top:6px;font-size:0.88em;color:var(--muted);">
+        <li>重庆江津国际花椒产业城——全国最大集散地</li>
+        <li>郑州调味品批发市场——河南是花椒深加工大省</li>
+        <li>成都海霸王市场——西南最大食品批发市场</li>
+        <li>拿着样品和报价单，一家一家递</li>
+      </ul>
+      <p style="margin-top:6px;"><span class="tag tag-a">本月可做</span> <span class="tag tag-b">成本：差旅费</span></p>
+    </div>
+
+    <div class="act">
+      <div class="num">5</div>
+      <h4>打造芮城花椒区域品牌</h4>
+      <p>学甘肃武都——政府牵头做"武都花椒"品牌，价格比杂牌高30%。你们可以和县政府合作，利用已有的"芮城花椒电商助农季"活动，把惠众农业包装成<strong>芮城花椒龙头企业</strong>。</p>
+      <p style="margin-top:6px;"><span class="tag tag-a">长期布局</span> <span class="tag tag-b">借政府资源</span></p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ 6. 深加工 ═══════ -->
+<div class="sec">
+  <h2 class="sec-t">六、你们最大的机会：深加工</h2>
+  <p class="sec-sub">卖干花椒一斤赚几块钱，做成花椒油一斤赚几十块</p>
+
+  <div class="tw" style="margin-bottom:20px;">
+    <table>
+      <thead><tr><th>产品形态</th><th>原料成本</th><th>出厂价</th><th>利润率</th><th>难度</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>干花椒（现在）</td>
+          <td>—</td>
+          <td class="price">22-28元/斤</td>
+          <td>10-20%</td>
+          <td>⭐ 无</td>
+        </tr>
+        <tr>
+          <td>花椒粉（粗加工）</td>
+          <td>+2元/斤</td>
+          <td class="price">35-50元/斤</td>
+          <td>40-80%</td>
+          <td>⭐⭐ 低</td>
+        </tr>
+        <tr>
+          <td>花椒油（深加工）</td>
+          <td>+5元/瓶</td>
+          <td class="price">15-25元/瓶(200ml)</td>
+          <td>50-150%</td>
+          <td>⭐⭐⭐ 中</td>
+        </tr>
+        <tr>
+          <td>火锅底料OEM</td>
+          <td>+8元/包</td>
+          <td class="price">15-30元/包(300g)</td>
+          <td>50-100%</td>
+          <td>⭐⭐⭐⭐ 较高</td>
+        </tr>
+        <tr>
+          <td>花椒酱/辣椒酱</td>
+          <td>+3元/瓶</td>
+          <td class="price">10-20元/瓶</td>
+          <td>60-120%</td>
+          <td>⭐⭐⭐ 中</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="co co-g">
+    <h4>惠众农业的调料厂最优路线</h4>
+    <p><strong>第一步：</strong>先做花椒粉（设备简单，投资小，B2B走量）→ 卖给火锅底料厂、卤制品厂</p>
+    <p><strong>第二步：</strong>做花椒油（代工模式）→ 找金龙鱼/鲁花/幺麻子谈OEM，用他们的品牌你只管生产</p>
+    <p><strong>第三步：</strong>做自己的品牌——"芮城惠众"牌花椒油/花椒粉 → 1688+抖音+C端电商</p>
+  </div>
+</div>
+
+<!-- ═══════ 7. ACTION PLAN ═══════ -->
+<div class="sec">
+  <h2 class="sec-t">七、三个月行动清单</h2>
+  <p class="sec-sub">简单粗暴、能落地、做了就有效</p>
+
+  <h3 style="color:var(--pri);">第一个月：打好基础</h3>
+  <ul class="chk" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;margin-bottom:20px;">
+    <li><strong>送检花椒</strong> → 拿到挥发油、麻度、农残检测报告（有了这个才能跟大客户谈）</li>
+    <li><strong>注册1688企业店</strong> → 上架干花椒+花椒粉+花椒油（配好产品图和检测报告）</li>
+    <li><strong>开通抖音企业号</strong> → 拍3-5条视频展示产地和工厂（"芮城花椒产地直供"）</li>
+    <li><strong>整理报价单</strong> → 一页纸，包含品种、规格、价格、起订量、检测报告摘要</li>
+    <li><strong>做一个产品详情页</strong> → 用本报告的数据，做成PDF和图片版，微信能发给客户看</li>
+  </ul>
+
+  <h3 style="color:var(--pri);">第二个月：开始出击</h3>
+  <ul class="chk" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;margin-bottom:20px;">
+    <li><strong>联系重庆江津花椒城</strong> → 电话沟通入驻/寄售/供货（全国最大集散地）</li>
+    <li><strong>在1688上主动联系100家火锅底料厂</strong> → 发报价单、寄样品（30家会回复你）</li>
+    <li><strong>联系绝味鸭脖/周黑鸭采购部</strong> → 寄样品（卤制品是花椒大户）</li>
+    <li><strong>联系颐海国际/天味食品采购</strong> → 寄样品+报价（火锅底料龙头）</li>
+    <li><strong>跑一趟郑州调味品批发市场</strong> → 带样品扫街，挨家递</li>
+  </ul>
+
+  <h3 style="color:var(--pri);">第三个月：建立渠道</h3>
+  <ul class="chk" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;margin-bottom:20px;">
+    <li><strong>报名参加一场展会</strong> → 上海调味品展或重庆火锅展，带样品布展</li>
+    <li><strong>对接县政府</strong> → 申请"芮城花椒"品牌授权，列入政府推广名单</li>
+    <li><strong>开始做花椒油</strong> → 如果调料厂设备齐全，启动花椒油生产线，找代工客户</li>
+    <li><strong>抖音直播常态化</strong> → 每周2-3场，B端+C端同时做</li>
+    <li><strong>复盘：哪些渠道来客户了？</strong> → 砍掉没效果的，加码有效果的</li>
+  </ul>
+</div>
+
+<!-- ═══════ 8. 速查 ═══════ -->
+<div class="sec">
+  <h2 class="sec-t">八、关键资源速查表</h2>
+  <p class="sec-sub">所有你要用到的信息全在这</p>
+
+  <h3 style="color:var(--pri);margin:24px 0 14px;">展会一览</h3>
+  <div class="tw">
+    <table>
+      <thead><tr><th>展会</th><th>地点</th><th>网站</th></tr></thead>
+      <tbody>
+        <tr><td>上海国际调味品展(CFI)</td><td>上海</td><td>cfi-expo.com</td></tr>
+        <tr><td>上海火锅食材展(华食展)</td><td>上海</td><td>worldfoods.cn</td></tr>
+        <tr><td>重庆餐饮食材展</td><td>重庆</td><td>shicaizhan.cn</td></tr>
+        <tr><td>齐鲁火锅节</td><td>济南</td><td>onezh.com</td></tr>
+        <tr><td>北京火锅展</td><td>北京</td><td>jufair.com</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 style="color:var(--pri);margin:24px 0 14px;">批发市场速查</h3>
+  <div class="tw">
+    <table>
+      <thead><tr><th>市场</th><th>城市</th><th>为什么值得跑</th></tr></thead>
+      <tbody>
+        <tr><td>重庆江津国际花椒产业城</td><td>重庆</td><td>全国最大花椒集散地，所有大买家都在这里交易</td></tr>
+        <tr><td>郑州信基调味品城</td><td>郑州</td><td>中原最大调味品批发，河南是深加工大省</td></tr>
+        <tr><td>成都海霸王市场</td><td>成都</td><td>西南最大食品批发，火锅底料厂集中</td></tr>
+        <tr><td>北京新发地调料区</td><td>北京</td><td>北方最大农批，覆盖京津冀</td></tr>
+        <tr><td>广州江南市场</td><td>广州</td><td>华南最大，覆盖广东餐饮市场</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 style="color:var(--pri);margin:24px 0 14px;">B2B电商平台</h3>
+  <div class="tw">
+    <table>
+      <thead><tr><th>平台</th><th>网址</th><th>适合</th></tr></thead>
+      <tbody>
+        <tr><td>1688</td><td>1688.com</td><td><span class="tag tag-g">首选</span> 国内B2B，火锅底料厂采购都在这</td></tr>
+        <tr><td>惠农网</td><td>cnhnb.com</td><td>农产品B2B，查行情+卖货</td></tr>
+        <tr><td>一亩田</td><td>ymt.com</td><td>农产品B2B，对接批发商</td></tr>
+        <tr><td>抖音电商</td><td>抖音</td><td>B端+C端都可以，直播带货</td></tr>
+        <tr><td>拼多多</td><td>拼多多</td><td>C端走量，小包装花椒/花椒油</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ═══════ 9. 总结 ═══════ -->
+<div class="sec">
+  <h2 class="sec-t">九、总结：你们的核心打法就三句话</h2>
+
+  <div class="g2">
+    <div class="card" style="text-align:center;">
+      <div style="font-size:3em;margin-bottom:10px;">1</div>
+      <h4 style="color:var(--pri);">从卖原料 → 卖产品</h4>
+      <p style="color:var(--muted);">先做花椒粉、花椒油，利润翻3-5倍，别只卖干花椒</p>
+    </div>
+    <div class="card" style="text-align:center;">
+      <div style="font-size:3em;margin-bottom:10px;">2</div>
+      <h4 style="color:var(--pri);">从等贩子 → 自己找客户</h4>
+      <p style="color:var(--muted);">1688开店+展会参展+上门拜访，客户不会自己来风陵渡</p>
+    </div>
+    <div class="card" style="text-align:center;">
+      <div style="font-size:3em;margin-bottom:10px;">3</div>
+      <h4 style="color:var(--pri);">从没品牌 → 打品牌</h4>
+      <p style="color:var(--muted);">国家地理标志+中国花椒之乡+送检报告=你的品牌故事</p>
+    </div>
+  </div>
+
+  <div class="co co-g" style="margin-top:24px; text-align:center;">
+    <h4 style="font-size:1.1em;">最后一句大实话</h4>
+    <p style="font-size:1.05em;">你们的花椒不差，差的是<strong>没人知道你们</strong>。全国4亿人吃花椒，94万吨的年需求量，芮城6700吨只占0.7%——不是市场饱和了，是你们还没进入市场。1688开店+寄样品+跑一趟展会，第一个客户就来了。</p>
+  </div>
+</div>
+
+</div>
+
+<footer>
+  <p>报告生成：2026年6月9日 · 山西芮城风陵渡 · 惠众农业发展有限公司</p>
+  <p style="margin-top:4px;">数据来源：惠农网、报告大厅、虎嗅、新华指数、Counterpoint等行业公开数据</p>
+  <p style="margin-top:4px;">价格以实际交易为准 · 建议以检测报告确认产品特性</p>
+</footer>
+
+</body>
+</html>
