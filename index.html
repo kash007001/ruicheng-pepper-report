@@ -1,632 +1,682 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>芮城花椒 · 惠众农业市场突围方案 | 2026年6月</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
-<style>
-:root {
-  --bg: #0a0f0a;
-  --surface: #141e14;
-  --surface2: #1a2a1a;
-  --border: #1e301e;
-  --text: #e8ede4;
-  --muted: #7d8f78;
-  --pri: #4ade80;
-  --pri2: #22c55e;
-  --pri-bg: rgba(74,222,128,0.08);
-  --sec: #f59e0b;
-  --sec-bg: rgba(245,158,11,0.08);
-  --red: #ef4444;
-  --red-bg: rgba(239,68,68,0.08);
-  --blue: #60a5fa;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>风陵渡大红袍花椒 · 大客户调研报告</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-* { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background: #f8f6f2;
+            color: #2d2a24;
+            line-height: 1.6;
+        }
 
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: 'Inter', 'Noto Sans SC', -apple-system, sans-serif;
-  line-height: 1.8;
-  -webkit-font-smoothing: antialiased;
-}
+        /* ===== Hero ===== */
+        .hero {
+            background: linear-gradient(135deg, #8B1A1A 0%, #C0392B 40%, #E74C3C 100%);
+            color: #fff;
+            padding: 56px 24px 48px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: "🌶️";
+            position: absolute;
+            right: -20px;
+            bottom: -30px;
+            font-size: 200px;
+            opacity: 0.08;
+            transform: rotate(-15deg);
+        }
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+        .hero .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 4px;
+        }
+        .hero .location {
+            display: inline-block;
+            margin-top: 12px;
+            background: rgba(255,255,255,0.15);
+            padding: 6px 20px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            backdrop-filter: blur(4px);
+        }
 
-/* ── Hero ── */
-.hero {
-  background: radial-gradient(ellipse 70% 50% at 50% -10%, #1a3020 0%, #080f08 100%);
-  border-bottom: 1px solid var(--border);
-  padding: 70px 24px 60px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-.hero::before {
-  content: '';
-  position: absolute; top: 0; left: 50%; transform: translateX(-50%);
-  width: 500px; height: 500px;
-  background: radial-gradient(circle, rgba(74,222,128,0.06) 0%, transparent 70%);
-}
-.hero .loc {
-  font-size: 1em; color: var(--pri2); font-weight: 600;
-  margin-bottom: 16px; letter-spacing: 2px;
-}
-.hero h1 {
-  font-size: clamp(2em, 5vw, 3em);
-  font-weight: 900; letter-spacing: -0.02em;
-  line-height: 1.25; margin-bottom: 12px;
-}
-.hero h1 em { font-style: normal; color: var(--pri); }
-.hero .sub {
-  font-size: 1.1em; color: var(--muted);
-  max-width: 600px; margin: 0 auto 28px;
-}
-.hero .row {
-  display: flex; gap: 40px; justify-content: center;
-  flex-wrap: wrap;
-}
-.hero .row .it { text-align: center; }
-.hero .row .it .n { font-size: 2em; font-weight: 800; color: var(--pri); }
-.hero .row .it .l { font-size: 0.82em; color: var(--muted); margin-top: 2px; }
+        /* ===== Container ===== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 32px 20px;
+        }
 
-/* ── Container ── */
-.container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+        /* ===== Section ===== */
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #8B1A1A;
+            margin: 40px 0 20px;
+            padding-left: 14px;
+            border-left: 4px solid #C0392B;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .section-desc {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
 
-/* ── Section ── */
-.sec { margin: 56px 0; }
-.sec-t { font-size: 1.55em; font-weight: 700; margin-bottom: 6px; letter-spacing: -0.01em; }
-.sec-sub { color: var(--muted); margin-bottom: 24px; font-size: 0.93em; }
+        /* ===== Company Card ===== */
+        .company-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 24px 28px;
+            margin-bottom: 18px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            border: 1px solid #eee;
+            transition: box-shadow .2s;
+        }
+        .company-card:hover {
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+        .company-card .top-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 8px 16px;
+            margin-bottom: 10px;
+        }
+        .company-card .rank-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background: #C0392B;
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.85rem;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+        .company-card .company-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+        .company-card .brand-tag {
+            display: inline-block;
+            background: #fef3e2;
+            color: #b85c1b;
+            font-size: 0.8rem;
+            padding: 2px 12px;
+            border-radius: 12px;
+        }
+        .company-card .stock-tag {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2e7d32;
+            font-size: 0.8rem;
+            padding: 2px 12px;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+        .company-card .desc {
+            color: #555;
+            font-size: 0.93rem;
+            margin-bottom: 12px;
+        }
+        .company-card .info-grid {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 6px 16px;
+            font-size: 0.93rem;
+        }
+        .company-card .info-grid .label {
+            color: #999;
+            white-space: nowrap;
+        }
+        .company-card .info-grid .value {
+            color: #333;
+        }
+        .company-card .info-grid .value a {
+            color: #C0392B;
+            text-decoration: none;
+        }
+        .company-card .info-grid .value a:hover {
+            text-decoration: underline;
+        }
+        .company-card .action-links {
+            margin-top: 12px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 6px 18px;
+            border-radius: 8px;
+            font-size: 0.88rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all .2s;
+        }
+        .btn-primary {
+            background: #C0392B;
+            color: #fff;
+        }
+        .btn-primary:hover {
+            background: #A93226;
+        }
+        .btn-outline {
+            border: 1px solid #ddd;
+            color: #555;
+        }
+        .btn-outline:hover {
+            border-color: #C0392B;
+            color: #C0392B;
+        }
 
-/* ── Cards ── */
-.card {
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: 14px; padding: 26px;
-}
-.card2 { background: var(--surface2); border: 1px solid var(--border); border-radius: 14px; padding: 26px; }
+        /* ===== B2B Section ===== */
+        .b2b-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .b2b-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid #eee;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        }
+        .b2b-card h4 {
+            font-size: 1rem;
+            margin-bottom: 6px;
+        }
+        .b2b-card p {
+            font-size: 0.88rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .b2b-card a {
+            color: #C0392B;
+            font-size: 0.88rem;
+            text-decoration: none;
+        }
+        .b2b-card a:hover { text-decoration: underline; }
 
-/* ── Stat Row ── */
-.sr {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  gap: 14px; margin: 20px 0;
-}
-.sr .st {
-  background: var(--surface2); border: 1px solid var(--border);
-  border-radius: 12px; padding: 20px; text-align: center;
-}
-.sr .st .v { font-size: 1.8em; font-weight: 800; color: var(--pri); line-height: 1; margin-bottom: 5px; }
-.sr .st .l { font-size: 0.83em; color: var(--muted); }
+        /* ===== Tips ===== */
+        .tips-box {
+            background: linear-gradient(135deg, #fff8f0, #fff);
+            border-radius: 14px;
+            padding: 28px;
+            border: 1px solid #f0e0c8;
+            margin-top: 12px;
+        }
+        .tips-box h3 {
+            color: #8B1A1A;
+            margin-bottom: 12px;
+        }
+        .tips-box ul {
+            list-style: none;
+            padding: 0;
+        }
+        .tips-box ul li {
+            padding: 6px 0;
+            padding-left: 24px;
+            position: relative;
+            color: #444;
+        }
+        .tips-box ul li::before {
+            content: "✔️";
+            position: absolute;
+            left: 0;
+            font-size: 0.85rem;
+        }
 
-/* ── Tables ── */
-.tw { overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; }
-table { width: 100%; border-collapse: collapse; font-size: 0.93em; }
-th {
-  background: var(--surface2); padding: 13px 16px; text-align: left;
-  font-weight: 600; font-size: 0.83em; color: var(--muted);
-  text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap;
-}
-td { padding: 13px 16px; border-bottom: 1px solid var(--border); }
-tr:last-child td { border-bottom: none; }
-tr:hover td { background: rgba(74,222,128,0.03); }
+        /* ===== Footer ===== */
+        .footer {
+            text-align: center;
+            padding: 40px 20px 20px;
+            color: #aaa;
+            font-size: 0.85rem;
+        }
 
-/* ── Action Cards ── */
-.act-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
-  gap: 16px;
-}
-.act {
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: 14px; padding: 24px;
-  transition: border-color 0.2s, transform 0.2s;
-}
-.act:hover { border-color: var(--pri); transform: translateY(-2px); }
-.act .num {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 32px; height: 32px; background: var(--pri); color: #000;
-  border-radius: 8px; font-weight: 800; font-size: 0.9em; margin-bottom: 12px;
-}
-.act h4 { font-size: 1.05em; margin-bottom: 8px; }
-.act p { font-size: 0.9em; color: var(--muted); line-height: 1.65; }
-
-/* ── Callout ── */
-.co {
-  border-radius: 12px; padding: 20px 24px; margin: 18px 0;
-  font-size: 0.93em; line-height: 1.75;
-}
-.co-g { background: var(--pri-bg); border: 1px solid rgba(74,222,128,0.2); }
-.co-g h4 { color: var(--pri); }
-.co-a { background: var(--sec-bg); border: 1px solid rgba(245,158,11,0.2); }
-.co-a h4 { color: var(--sec); }
-.co-r { background: var(--red-bg); border: 1px solid rgba(239,68,68,0.2); }
-.co-r h4 { color: var(--red); }
-.co h4 { margin-bottom: 6px; font-size: 0.98em; }
-
-/* ── Tags ── */
-.tag {
-  display: inline-block; font-size: 0.76em; font-weight: 700;
-  padding: 3px 10px; border-radius: 6px; margin: 2px 4px 2px 0;
-}
-.tag-g { background: rgba(74,222,128,0.15); color: var(--pri); }
-.tag-a { background: rgba(245,158,11,0.15); color: var(--sec); }
-.tag-r { background: rgba(239,68,68,0.15); color: var(--red); }
-.tag-b { background: rgba(96,165,250,0.15); color: var(--blue); }
-
-/* ── 2-column ── */
-.g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-@media (max-width: 768px) { .g2 { grid-template-columns: 1fr; } }
-
-/* ── Flow ── */
-.flow {
-  display: flex; align-items: center; justify-content: center;
-  flex-wrap: wrap; gap: 10px; padding: 28px 0; font-weight: 600;
-}
-.flow .fs {
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: 10px; padding: 14px 20px; text-align: center; font-size: 0.88em;
-}
-.flow .fa { color: var(--pri); font-size: 1.3em; }
-
-/* ── Footer ── */
-footer {
-  text-align: center; padding: 46px 24px; color: var(--muted);
-  font-size: 0.83em; border-top: 1px solid var(--border); margin-top: 56px;
-}
-
-/* ── Checklist ── */
-.chk { list-style: none; padding: 0; }
-.chk li {
-  padding: 14px 14px 14px 40px; position: relative;
-  border-bottom: 1px solid var(--border); font-size: 0.93em;
-}
-.chk li:last-child { border-bottom: none; }
-.chk li::before {
-  content: '✓'; position: absolute; left: 10px; top: 14px;
-  color: var(--pri); font-weight: 800; font-size: 1.1em;
-}
-
-.high { color: var(--pri); font-weight: 700; }
-.price { font-family: 'SF Mono','JetBrains Mono',monospace; color: var(--pri); font-weight: 600; }
-</style>
+        /* ===== Responsive ===== */
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 1.8rem; }
+            .company-card { padding: 18px 16px; }
+            .company-card .info-grid { grid-template-columns: 1fr; gap: 4px; }
+        }
+    </style>
 </head>
 <body>
 
-<!-- ═══════ HERO ═══════ -->
+<!-- ============ HERO ============ -->
 <section class="hero">
-  <div class="loc">山西 · 运城 · 风陵渡</div>
-  <h1>芮城花椒<em>市场突围方案</em></h1>
-  <p class="sub">
-    惠众农业 · 大红袍花椒 · 国家地理标志产品<br>
-    从"只能卖给小贩"到"直接对接全国大客户"的<strong>实战打法</strong>
-  </p>
-  <div class="row">
-    <div class="it"><div class="n">12.5万亩</div><div class="l">芮城花椒种植面积</div></div>
-    <div class="it"><div class="n">6,700吨</div><div class="l">年产干椒</div></div>
-    <div class="it"><div class="n">30.9元/斤</div><div class="l">大红袍全国均价(2026.6)</div></div>
-    <div class="it"><div class="n">350亿+</div><div class="l">花椒油市场(2025预计)</div></div>
-  </div>
+    <h1>风陵渡 · 大红袍花椒</h1>
+    <p class="subtitle">山西芮城 · 黄土高原特级花椒产地</p>
+    <p class="location">📍 山西省运城市芮城县风陵渡镇</p>
 </section>
 
 <div class="container">
 
-<!-- ═══════ 1. 现状 ═══════ -->
-<div class="sec">
-  <h2 class="sec-t">一、你们现在的处境（先看清楚问题在哪）</h2>
-  <p class="sec-sub">不是花椒不好，是渠道断了——你们卡在最底层</p>
-
-  <div class="flow">
-    <div class="fs">🌶️ 惠众农业<br><small>种花椒+初加工</small></div>
-    <div class="fa">→</div>
-    <div class="fs">🧑‍🌾 当地小贩<br><small>压价收购，赚第一道钱</small></div>
-    <div class="fa">→</div>
-    <div class="fs">🏭 河南调味品厂<br><small>深加工，赚第二道钱</small></div>
-    <div class="fa">→</div>
-    <div class="fs">🛒 终端市场<br><small>云贵川/全国，赚第三道钱</small></div>
-  </div>
-
-  <div class="g2" style="margin-top:16px;">
-    <div class="co co-r">
-      <h4>你们的痛点</h4>
-      <ul style="margin-left:16px;">
-        <li>只卖原料，不碰加工——<strong>利润被中间商吃掉70%+</strong></li>
-        <li>不知道自己的花椒什么特点（香型？麻度？），说不清卖点</li>
-        <li>开了调料厂但没销路——有加工能力没市场</li>
-        <li>不会找客户，只能等贩子上门</li>
-      </ul>
-    </div>
-    <div class="co co-g">
-      <h4>你们手里的好牌</h4>
-      <ul style="margin-left:16px;">
-        <li>国家地理标志 + 中国花椒之乡——有品牌故事可讲</li>
-        <li>大红袍花椒是市场认知度最高的品种</li>
-        <li>12.5万亩规模，产量够——能接大单</li>
-        <li>已有加工厂，能做深加工产品——就差销路</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<!-- ═══════ 2. 产品定位 ═══════ -->
-<div class="sec">
-  <h2 class="sec-t">二、先搞明白：你们的椒到底啥特点？</h2>
-  <p class="sec-sub">这是你们最需要搞清楚的事——不知道自己的产品，就没法跟客户说</p>
-
-  <div class="g2">
-    <div class="card">
-      <h4 style="color:var(--pri);margin-bottom:12px;">芮城大红袍 vs 四川花椒</h4>
-      <table style="font-size:0.9em;">
-        <tr><td style="width:35%;">品种</td><td><strong>大红袍花椒</strong>（北方品种群）</td></tr>
-        <tr><td>主要产区</td><td>山西芮城、陕西韩城、甘肃武都</td></tr>
-        <tr><td>外观</td><td>粒大、色红、油腺突出</td></tr>
-        <tr><td>核心特点</td><td><strong>香重于麻</strong>——北方椒一般香味浓郁，麻度适中</td></tr>
-        <tr><td>vs 四川青花椒</td><td>四川以麻为主，北方以香为主</td></tr>
-        <tr><td>vs 四川红花椒</td><td>四川红花椒麻味更重，芮城椒香味更突出</td></tr>
-        <tr><td>适用场景</td><td>炖肉、炒菜、火锅底料（提香）、花椒油</td></tr>
-      </table>
-    </div>
-    <div class="card2">
-      <h4 style="color:var(--sec);margin-bottom:12px;">马上要做的事</h4>
-      <ul style="margin-left:16px;font-size:0.93em;">
-        <li><strong>送检</strong>：把你们的花椒送到食品检测机构，测<span class="high">挥发油含量、麻度指数（山椒素）、水分</span></li>
-        <li>拿着检测报告，你就有了<strong>和别人不一样的证据</strong></li>
-        <li>如果检测出来"香味物质含量高于四川椒"——这就是你的<strong>核心卖点</strong></li>
-        <li>推荐检测机构：当地食药监局、SGS、华测检测</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="co co-g" style="margin-top:16px;">
-    <h4>一句话卖点（拿去直接用）</h4>
-    <p style="font-size:1.1em;font-weight:600;">"芮城大红袍——国家地理标志产品，粒大色红，<span style="color:var(--sec);">香味浓郁，麻度适中</span>，最适合做火锅底料和花椒油。"</p>
-  </div>
-</div>
-
-<!-- ═══════ 3. 市场行情 ═══════ -->
-<div class="sec">
-  <h2 class="sec-t">三、花椒市场价格行情（2026年6月）</h2>
-  <p class="sec-sub">让你心里有数——别人卖多少钱，你应该卖多少钱</p>
-
-  <div class="tw">
-    <table>
-      <thead>
-        <tr><th>品种</th><th>全国均价</th><th>产地价（参考）</th><th>终端零售价</th><th>价差空间</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>大红袍花椒（你们的）</strong></td>
-          <td class="price">30.9元/斤</td>
-          <td class="price">22-28元/斤</td>
-          <td>35-50元/斤</td>
-          <td><span class="tag tag-g">50-120%</span></td>
-        </tr>
-        <tr>
-          <td>陕西韩城大红袍</td>
-          <td class="price">28.32元/斤</td>
-          <td class="price">20-26元/斤</td>
-          <td>35-45元/斤</td>
-          <td><span class="tag tag-g">50-100%</span></td>
-        </tr>
-        <tr>
-          <td>甘肃武都大红袍</td>
-          <td class="price">33.5-40.67元/斤</td>
-          <td class="price">30-38元/斤</td>
-          <td>45-60元/斤</td>
-          <td><span class="tag tag-g">40-60%</span></td>
-        </tr>
-        <tr>
-          <td>四川红花椒</td>
-          <td class="price">31.42元/斤</td>
-          <td class="price">25-35元/斤</td>
-          <td>40-60元/斤</td>
-          <td><span class="tag tag-g">50-100%</span></td>
-        </tr>
-        <tr>
-          <td>四川青花椒</td>
-          <td class="price">26.28元/斤</td>
-          <td class="price">18-25元/斤</td>
-          <td>30-45元/斤</td>
-          <td><span class="tag tag-g">60-100%</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="co co-g" style="margin-top:16px;">
-    <h4>你们的定价策略</h4>
-    <p><strong>产地批发价定在 22-26元/斤</strong>（略低于韩城，突出性价比），<strong>深加工产品（花椒油/花椒粉）溢价100-300%</strong>。</p>
-    <p style="margin-top:4px;">陕西韩城是你们最直接的竞品，价格差不多，但你们有"黄河金三角"的地理故事可以讲。</p>
-  </div>
-</div>
-
-<!-- ═══════ 4. 大客户在哪 ═══════ -->
-<div class="sec">
-  <h2 class="sec-t">四、你的大客户到底在哪？</h2>
-  <p class="sec-sub">不是找不到客户，是你从来没去找过这些人</p>
-
-  <h3 style="color:var(--pri);margin:24px 0 14px;">客户类型一：火锅底料厂（最大买家）</h3>
-  <div class="tw">
-    <table>
-      <thead><tr><th>企业类型</th><th>代表</th><th>花椒用量</th><th>怎么联系</th></tr></thead>
-      <tbody>
-        <tr>
-          <td>火锅底料龙头</td>
-          <td>颐海国际（海底捞底料供应商）、天味食品（大红袍/好人家）、红九九</td>
-          <td>数千吨/年</td>
-          <td>官网→采购部→寄样品→等验货</td>
-        </tr>
-        <tr>
-          <td>川渝火锅连锁</td>
-          <td>海底捞、小龙坎、大龙燚、蜀大侠、朱光玉</td>
-          <td>自建中央厨房采购</td>
-          <td>联系供应链/中央厨房采购部</td>
-        </tr>
-        <tr>
-          <td>中小火锅底料厂</td>
-          <td>重庆/成都/郑州 数千家中小底料厂</td>
-          <td>几十到几百吨/年</td>
-          <td><span class="tag tag-g">最现实的突破口</span> 1688搜索+上门拜访</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3 style="color:var(--pri);margin:24px 0 14px;">客户类型二：调味品/食品企业</h3>
-  <div class="tw">
-    <table>
-      <thead><tr><th>领域</th><th>代表企业</th><th>用花椒做什么</th><th>怎么切入</th></tr></thead>
-      <tbody>
-        <tr><td>复合调味料</td><td>十三香、王守义、太太乐、海天</td><td>花椒粉、花椒油、调味包</td><td>采购部招标</td></tr>
-        <tr><td>卤制品</td><td>绝味鸭脖、周黑鸭、煌上煌</td><td>卤料包（花椒核心原料）</td><td>绝味年用花椒数千吨</td></tr>
-        <tr><td>方便食品</td><td>统一、康师傅、白象、今麦郎</td><td>藤椒/麻辣味调料包</td><td>调料包供应商切入</td></tr>
-        <tr><td>辣酱/下饭酱</td><td>老干妈、饭扫光、吉香居</td><td>花椒是核心配料</td><td>样品寄送+报价</td></tr>
-        <tr><td>预制菜</td><td>味知香、安井、千味央厨</td><td>麻辣口味预制菜</td><td>新兴市场，机会大</td></tr>
-        <tr><td>休闲零食</td><td>良品铺子、三只松鼠、百草味</td><td>麻辣味零食</td><td>OEM代工调料</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3 style="color:var(--pri);margin:24px 0 14px;">客户类型三：花椒油/藤椒油厂家</h3>
-  <div class="g2">
-    <div class="co co-g">
-      <h4>为什么优先攻这个方向？</h4>
-      <p>花椒油市场2025年预计<strong>350亿+</strong>，年增长20%。你们自己有调料厂，可以直接做花椒油，利润比卖干花椒<strong>高3-5倍</strong>。</p>
-    </div>
-    <div class="co co-a">
-      <h4>头部玩家</h4>
-      <p>幺麻子（市占42%）、万佛食品（11%）、五丰黎红、金龙鱼、鲁花等。你们不用跟他们正面竞争，<strong>做他们的原料供应商</strong>或<strong>做区域品牌</strong>就行。</p>
-    </div>
-  </div>
-</div>
-
-<!-- ═══════ 5. 五大打法 ═══════ -->
-<div class="sec">
-  <h2 class="sec-t">五、怎么找客户？五大实战打法</h2>
-  <p class="sec-sub">每一条都是能立刻动手的，不是纸上谈兵</p>
-
-  <div class="act-grid">
-    <div class="act">
-      <div class="num">1</div>
-      <h4>1688批发网开店</h4>
-      <p><strong>最直接的B2B渠道。</strong>注册企业店铺，上架干花椒、花椒粉、花椒油。火锅底料厂、食品厂的采购每天都在1688搜供应商。年费几千块，拍好产品图，标明"产地直发""国家地理标志""支持验厂"。</p>
-      <p style="margin-top:6px;"><span class="tag tag-g">本周可做</span> <span class="tag tag-b">成本：低</span></p>
+    <!-- ============ INTRO ============ -->
+    <div style="margin-top: 8px;">
+        <p style="font-size:1.05rem;color:#444;">
+            风陵渡地处黄河拐弯处，气候独特，所产<strong>大红袍花椒</strong>以色泽红艳、麻味醇正、香气浓郁著称。
+            以下为经过调研整理的<strong>行业前十大花椒采购企业</strong>，覆盖调味品龙头、火锅底料巨头、香辛料上市公司，
+            均有明确的花椒原料需求。附带官网、联系电话、采购对接方式等详细信息。
+        </p>
     </div>
 
-    <div class="act">
-      <div class="num">2</div>
-      <h4>抖音直播带货（B端+ C端）</h4>
-      <p><strong>B端：</strong>拍工厂、拍花椒筛选过程、拍产地，标题"芮城花椒产地直供，火锅底料厂首选"——餐饮老板和采购会刷到。<strong>C端：</strong>小包装花椒、花椒油直接卖给家庭，利润远高于批发。</p>
-      <p style="margin-top:6px;"><span class="tag tag-g">本周可做</span> <span class="tag tag-b">案例：江津花椒电商部</span></p>
+    <!-- ============ TOP 10 ============ -->
+    <h2 class="section-title">🏢 行业前十大采购企业</h2>
+    <p class="section-desc">按行业影响力排序，均为大红袍花椒的稳定大宗采购方</p>
+
+    <!-- 1. 天味食品 -->
+    <div class="company-card">
+        <div class="top-row">
+            <span class="rank-badge">1</span>
+            <span class="company-name">天味食品集团</span>
+            <span class="brand-tag">🏷️ 好人家 · 大红袍</span>
+            <span class="stock-tag">📈 603317.SH</span>
+        </div>
+        <div class="desc">火锅底料行业龙头，旗下"大红袍"品牌为花椒制品代表。年营收超30亿，<strong>年花椒需求数千吨</strong>，是花椒原料最大买家之一。</div>
+        <div class="info-grid">
+            <span class="label">📞 总机</span><span class="value">028-82808188</span>
+            <span class="label">📞 客服</span><span class="value">400-028-5300</span>
+            <span class="label">📧 合作邮箱</span><span class="value">dsh@teway.cn</span>
+            <span class="label">🌐 官网</span><span class="value"><a href="https://www.teway.cn" target="_blank">www.teway.cn</a></span>
+            <span class="label">📍 地址</span><span class="value">成都市双流区西航港街道腾飞一路333号</span>
+            <span class="label">💡 采购对接</span><span class="value">建议拨打总机转"采购部"或发送合作邮件至 dsh@teway.cn</span>
+        </div>
+        <div class="action-links">
+            <a class="btn btn-primary" href="https://www.teway.cn/partner.html" target="_blank">供应商合作页</a>
+            <a class="btn btn-outline" href="https://www.teway.cn" target="_blank">访问官网</a>
+        </div>
     </div>
 
-    <div class="act">
-      <div class="num">3</div>
-      <h4>参加食品/火锅展会</h4>
-      <p>这是<strong>找大客户最快的方式</strong>。带样品、带检测报告、带报价单。以下是2026年重点展会：</p>
-      <ul style="margin-left:14px;margin-top:6px;font-size:0.88em;color:var(--muted);">
-        <li>上海国际调味品展（CFI）</li>
-        <li>上海火锅食材展（华食展）</li>
-        <li>重庆餐饮食材展</li>
-        <li>齐鲁火锅节（济南）</li>
-        <li>味动中国（武汉站）</li>
-      </ul>
-      <p style="margin-top:6px;"><span class="tag tag-a">月度可做</span> <span class="tag tag-b">成本：中</span></p>
+    <!-- 2. 颐海国际 -->
+    <div class="company-card">
+        <div class="top-row">
+            <span class="rank-badge">2</span>
+            <span class="company-name">颐海国际控股</span>
+            <span class="brand-tag">🏷️ 海底捞底料</span>
+            <span class="stock-tag">📈 01579.HK</span>
+        </div>
+        <div class="desc">海底捞旗下调味品公司，中国最大复合调味料生产商之一。年营收超60亿，<strong>花椒需求量大且品质要求极高</strong>。</div>
+        <div class="info-grid">
+            <span class="label">🌐 官网</span><span class="value"><a href="https://www.yihchina.com" target="_blank">www.yihchina.com</a></span>
+            <span class="label">📍 总部地址</span><span class="value">北京市大兴区（具体地址需通过官网联系页面获取）</span>
+            <span class="label">📧 合作对接</span><span class="value">官网有投资者联系页面，建议通过官网"联系方式"发送供应商自荐</span>
+            <span class="label">💡 采购建议</span><span class="value">蜀海供应链（海底捞采购平台）是其花椒采购通道，可同时对接</span>
+        </div>
+        <div class="action-links">
+            <a class="btn btn-primary" href="https://www.yihchina.com/?lang=zh-hant" target="_blank">访问官网</a>
+            <a class="btn btn-outline" href="https://www.shuhaisc.com/" target="_blank">蜀海供应链</a>
+        </div>
     </div>
 
-    <div class="act">
-      <div class="num">4</div>
-      <h4>直接拜访大客户采购部</h4>
-      <p>别等客户上门，直接去：</p>
-      <ul style="margin-left:14px;margin-top:6px;font-size:0.88em;color:var(--muted);">
-        <li>重庆江津国际花椒产业城——全国最大集散地</li>
-        <li>郑州调味品批发市场——河南是花椒深加工大省</li>
-        <li>成都海霸王市场——西南最大食品批发市场</li>
-        <li>拿着样品和报价单，一家一家递</li>
-      </ul>
-      <p style="margin-top:6px;"><span class="tag tag-a">本月可做</span> <span class="tag tag-b">成本：差旅费</span></p>
+    <!-- 3. 王守义十三香 -->
+    <div class="company-card">
+        <div class="top-row">
+            <span class="rank-badge">3</span>
+            <span class="company-name">王守义十三香集团</span>
+            <span class="brand-tag">🏷️ 王守义</span>
+        </div>
+        <div class="desc">中国香辛料调味品行业泰斗，年销售额数十亿，<strong>花椒是十三香核心原料之一</strong>，采购体系成熟稳定。</div>
+        <div class="info-grid">
+            <span class="label">📞 总机</span><span class="value">0396-2131000</span>
+            <span class="label">🌐 官网</span><span class="value"><a href="http://www.wangshouyi.com" target="_blank">www.wangshouyi.com</a></span>
+            <span class="label">📍 地址</span><span class="value">河南省驻马店市驿城区十三香路</span>
+            <span class="label">💡 采购对接</span><span class="value">官网"联系我们"页面有供应商合作通道，建议通过客服总机转采购部</span>
+        </div>
+        <div class="action-links">
+            <a class="btn btn-primary" href="http://www.wangshouyi.com/Customer/center?tab=2" target="_blank">合作联系页</a>
+            <a class="btn btn-outline" href="http://www.wangshouyi.com" target="_blank">访问官网</a>
+        </div>
     </div>
 
-    <div class="act">
-      <div class="num">5</div>
-      <h4>打造芮城花椒区域品牌</h4>
-      <p>学甘肃武都——政府牵头做"武都花椒"品牌，价格比杂牌高30%。你们可以和县政府合作，利用已有的"芮城花椒电商助农季"活动，把惠众农业包装成<strong>芮城花椒龙头企业</strong>。</p>
-      <p style="margin-top:6px;"><span class="tag tag-a">长期布局</span> <span class="tag tag-b">借政府资源</span></p>
+    <!-- 4. 仲景食品 -->
+    <div class="company-card">
+        <div class="top-row">
+            <span class="rank-badge">4</span>
+            <span class="company-name">仲景食品</span>
+            <span class="brand-tag">🏷️ 仲景香菇酱</span>
+            <span class="stock-tag">📈 300908.SZ</span>
+        </div>
+        <div class="desc">A股上市食品企业，香菇酱及调味料龙头。<strong>花椒油、花椒粉原料需求大</strong>，有公开供应商招募机制。</div>
+        <div class="info-grid">
+            <span class="label">📞 服务热线</span><span class="value">0377-69660000</span>
+            <span class="label">📧 服务邮箱</span><span class="value">zhongjing@zhongjing.com.cn</span>
+            <span class="label">🌐 官网</span><span class="value"><a href="https://www.zhongjing.com.cn" target="_blank">www.zhongjing.com.cn</a></span>
+            <span class="label">📍 生产本部</span><span class="value">河南省西峡县工业大道北段211号</span>
+            <span class="label">📍 营销中心</span><span class="value">郑东新区自贸大厦12层（金水东路心怡路）</span>
+            <span class="label">💡 采购对接</span><span class="value">曾公开招募供应商，建议发送简介至 zhongjing@zhongjing.com.cn</span>
+        </div>
+        <div class="action-links">
+            <a class="btn btn-primary" href="https://www.zhongjing.com.cn/contact.html" target="_blank">联系页面</a>
+            <a class="btn btn-outline" href="https://www.zhongjing.com.cn" target="_blank">访问官网</a>
+        </div>
     </div>
-  </div>
-</div>
 
-<!-- ═══════ 6. 深加工 ═══════ -->
-<div class="sec">
-  <h2 class="sec-t">六、你们最大的机会：深加工</h2>
-  <p class="sec-sub">卖干花椒一斤赚几块钱，做成花椒油一斤赚几十块</p>
-
-  <div class="tw" style="margin-bottom:20px;">
-    <table>
-      <thead><tr><th>产品形态</th><th>原料成本</th><th>出厂价</th><th>利润率</th><th>难度</th></tr></thead>
-      <tbody>
-        <tr>
-          <td>干花椒（现在）</td>
-          <td>—</td>
-          <td class="price">22-28元/斤</td>
-          <td>10-20%</td>
-          <td>⭐ 无</td>
-        </tr>
-        <tr>
-          <td>花椒粉（粗加工）</td>
-          <td>+2元/斤</td>
-          <td class="price">35-50元/斤</td>
-          <td>40-80%</td>
-          <td>⭐⭐ 低</td>
-        </tr>
-        <tr>
-          <td>花椒油（深加工）</td>
-          <td>+5元/瓶</td>
-          <td class="price">15-25元/瓶(200ml)</td>
-          <td>50-150%</td>
-          <td>⭐⭐⭐ 中</td>
-        </tr>
-        <tr>
-          <td>火锅底料OEM</td>
-          <td>+8元/包</td>
-          <td class="price">15-30元/包(300g)</td>
-          <td>50-100%</td>
-          <td>⭐⭐⭐⭐ 较高</td>
-        </tr>
-        <tr>
-          <td>花椒酱/辣椒酱</td>
-          <td>+3元/瓶</td>
-          <td class="price">10-20元/瓶</td>
-          <td>60-120%</td>
-          <td>⭐⭐⭐ 中</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="co co-g">
-    <h4>惠众农业的调料厂最优路线</h4>
-    <p><strong>第一步：</strong>先做花椒粉（设备简单，投资小，B2B走量）→ 卖给火锅底料厂、卤制品厂</p>
-    <p><strong>第二步：</strong>做花椒油（代工模式）→ 找金龙鱼/鲁花/幺麻子谈OEM，用他们的品牌你只管生产</p>
-    <p><strong>第三步：</strong>做自己的品牌——"芮城惠众"牌花椒油/花椒粉 → 1688+抖音+C端电商</p>
-  </div>
-</div>
-
-<!-- ═══════ 7. ACTION PLAN ═══════ -->
-<div class="sec">
-  <h2 class="sec-t">七、三个月行动清单</h2>
-  <p class="sec-sub">简单粗暴、能落地、做了就有效</p>
-
-  <h3 style="color:var(--pri);">第一个月：打好基础</h3>
-  <ul class="chk" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;margin-bottom:20px;">
-    <li><strong>送检花椒</strong> → 拿到挥发油、麻度、农残检测报告（有了这个才能跟大客户谈）</li>
-    <li><strong>注册1688企业店</strong> → 上架干花椒+花椒粉+花椒油（配好产品图和检测报告）</li>
-    <li><strong>开通抖音企业号</strong> → 拍3-5条视频展示产地和工厂（"芮城花椒产地直供"）</li>
-    <li><strong>整理报价单</strong> → 一页纸，包含品种、规格、价格、起订量、检测报告摘要</li>
-    <li><strong>做一个产品详情页</strong> → 用本报告的数据，做成PDF和图片版，微信能发给客户看</li>
-  </ul>
-
-  <h3 style="color:var(--pri);">第二个月：开始出击</h3>
-  <ul class="chk" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;margin-bottom:20px;">
-    <li><strong>联系重庆江津花椒城</strong> → 电话沟通入驻/寄售/供货（全国最大集散地）</li>
-    <li><strong>在1688上主动联系100家火锅底料厂</strong> → 发报价单、寄样品（30家会回复你）</li>
-    <li><strong>联系绝味鸭脖/周黑鸭采购部</strong> → 寄样品（卤制品是花椒大户）</li>
-    <li><strong>联系颐海国际/天味食品采购</strong> → 寄样品+报价（火锅底料龙头）</li>
-    <li><strong>跑一趟郑州调味品批发市场</strong> → 带样品扫街，挨家递</li>
-  </ul>
-
-  <h3 style="color:var(--pri);">第三个月：建立渠道</h3>
-  <ul class="chk" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;margin-bottom:20px;">
-    <li><strong>报名参加一场展会</strong> → 上海调味品展或重庆火锅展，带样品布展</li>
-    <li><strong>对接县政府</strong> → 申请"芮城花椒"品牌授权，列入政府推广名单</li>
-    <li><strong>开始做花椒油</strong> → 如果调料厂设备齐全，启动花椒油生产线，找代工客户</li>
-    <li><strong>抖音直播常态化</strong> → 每周2-3场，B端+C端同时做</li>
-    <li><strong>复盘：哪些渠道来客户了？</strong> → 砍掉没效果的，加码有效果的</li>
-  </ul>
-</div>
-
-<!-- ═══════ 8. 速查 ═══════ -->
-<div class="sec">
-  <h2 class="sec-t">八、关键资源速查表</h2>
-  <p class="sec-sub">所有你要用到的信息全在这</p>
-
-  <h3 style="color:var(--pri);margin:24px 0 14px;">展会一览</h3>
-  <div class="tw">
-    <table>
-      <thead><tr><th>展会</th><th>地点</th><th>网站</th></tr></thead>
-      <tbody>
-        <tr><td>上海国际调味品展(CFI)</td><td>上海</td><td>cfi-expo.com</td></tr>
-        <tr><td>上海火锅食材展(华食展)</td><td>上海</td><td>worldfoods.cn</td></tr>
-        <tr><td>重庆餐饮食材展</td><td>重庆</td><td>shicaizhan.cn</td></tr>
-        <tr><td>齐鲁火锅节</td><td>济南</td><td>onezh.com</td></tr>
-        <tr><td>北京火锅展</td><td>北京</td><td>jufair.com</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3 style="color:var(--pri);margin:24px 0 14px;">批发市场速查</h3>
-  <div class="tw">
-    <table>
-      <thead><tr><th>市场</th><th>城市</th><th>为什么值得跑</th></tr></thead>
-      <tbody>
-        <tr><td>重庆江津国际花椒产业城</td><td>重庆</td><td>全国最大花椒集散地，所有大买家都在这里交易</td></tr>
-        <tr><td>郑州信基调味品城</td><td>郑州</td><td>中原最大调味品批发，河南是深加工大省</td></tr>
-        <tr><td>成都海霸王市场</td><td>成都</td><td>西南最大食品批发，火锅底料厂集中</td></tr>
-        <tr><td>北京新发地调料区</td><td>北京</td><td>北方最大农批，覆盖京津冀</td></tr>
-        <tr><td>广州江南市场</td><td>广州</td><td>华南最大，覆盖广东餐饮市场</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3 style="color:var(--pri);margin:24px 0 14px;">B2B电商平台</h3>
-  <div class="tw">
-    <table>
-      <thead><tr><th>平台</th><th>网址</th><th>适合</th></tr></thead>
-      <tbody>
-        <tr><td>1688</td><td>1688.com</td><td><span class="tag tag-g">首选</span> 国内B2B，火锅底料厂采购都在这</td></tr>
-        <tr><td>惠农网</td><td>cnhnb.com</td><td>农产品B2B，查行情+卖货</td></tr>
-        <tr><td>一亩田</td><td>ymt.com</td><td>农产品B2B，对接批发商</td></tr>
-        <tr><td>抖音电商</td><td>抖音</td><td>B端+C端都可以，直播带货</td></tr>
-        <tr><td>拼多多</td><td>拼多多</td><td>C端走量，小包装花椒/花椒油</td></tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-
-<!-- ═══════ 9. 总结 ═══════ -->
-<div class="sec">
-  <h2 class="sec-t">九、总结：你们的核心打法就三句话</h2>
-
-  <div class="g2">
-    <div class="card" style="text-align:center;">
-      <div style="font-size:3em;margin-bottom:10px;">1</div>
-      <h4 style="color:var(--pri);">从卖原料 → 卖产品</h4>
-      <p style="color:var(--muted);">先做花椒粉、花椒油，利润翻3-5倍，别只卖干花椒</p>
+    <!-- 5. 德庄集团 -->
+    <div class="company-card">
+        <div class="top-row">
+            <span class="rank-badge">5</span>
+            <span class="company-name">德庄集团</span>
+            <span class="brand-tag">🏷️ 德庄火锅·德庄食品</span>
+        </div>
+        <div class="desc">重庆火锅巨头，自有农产品开发公司（重庆德庄农产品开发有限公司）负责原料采购。<strong>火锅底料花椒用量极大，对品质要求高</strong>。</div>
+        <div class="info-grid">
+            <span class="label">📞 集团热线</span><span class="value">023-62456700</span>
+            <span class="label">📞 食品热线</span><span class="value">023-62457832 / 023-62456018</span>
+            <span class="label">📞 供应链热线</span><span class="value">023-62456719 / 023-62456729</span>
+            <span class="label">📞 加盟合作</span><span class="value">400-023-8886</span>
+            <span class="label">📧 邮箱</span><span class="value">cqdz@vip.163.com</span>
+            <span class="label">🌐 官网</span><span class="value"><a href="https://www.cqdz.cn" target="_blank">www.cqdz.cn</a></span>
+            <span class="label">📍 地址</span><span class="value">重庆市南岸区</span>
+            <span class="label">💡 采购对接</span><span class="value">建议拨打供应链热线 023-62456719 或食品热线</span>
+        </div>
+        <div class="action-links">
+            <a class="btn btn-primary" href="https://www.cqdz.cn/food/link/index/about_id/74.html" target="_blank">联系页面</a>
+            <a class="btn btn-outline" href="https://www.cqdz.cn" target="_blank">访问官网</a>
+        </div>
     </div>
-    <div class="card" style="text-align:center;">
-      <div style="font-size:3em;margin-bottom:10px;">2</div>
-      <h4 style="color:var(--pri);">从等贩子 → 自己找客户</h4>
-      <p style="color:var(--muted);">1688开店+展会参展+上门拜访，客户不会自己来风陵渡</p>
-    </div>
-    <div class="card" style="text-align:center;">
-      <div style="font-size:3em;margin-bottom:10px;">3</div>
-      <h4 style="color:var(--pri);">从没品牌 → 打品牌</h4>
-      <p style="color:var(--muted);">国家地理标志+中国花椒之乡+送检报告=你的品牌故事</p>
-    </div>
-  </div>
 
-  <div class="co co-g" style="margin-top:24px; text-align:center;">
-    <h4 style="font-size:1.1em;">最后一句大实话</h4>
-    <p style="font-size:1.05em;">你们的花椒不差，差的是<strong>没人知道你们</strong>。全国4亿人吃花椒，94万吨的年需求量，芮城6700吨只占0.7%——不是市场饱和了，是你们还没进入市场。1688开店+寄样品+跑一趟展会，第一个客户就来了。</p>
-  </div>
-</div>
+    <!-- 6. 翠宏食品 -->
+    <div class="company-card">
+        <div class="top-row">
+            <span class="rank-badge">6</span>
+            <span class="company-name">翠宏食品</span>
+            <span class="brand-tag">🏷️ 翠宏</span>
+        </div>
+        <div class="desc">四川大型香辛料及辣椒调味品企业，<strong>花椒粉、花椒油树脂年用量大</strong>，拥有自建生产基地。</div>
+        <div class="info-grid">
+            <span class="label">📞 24h热线</span><span class="value">028-83111109 / 400-028-7177</span>
+            <span class="label">📧 邮箱</span><span class="value">cuihongsp@163.com</span>
+            <span class="label">🌐 官网</span><span class="value"><a href="https://www.sichuancuihong.com" target="_blank">www.sichuancuihong.com</a></span>
+            <span class="label">📍 营销中心</span><span class="value">成都市金牛区龙湖北城天街28栋11楼</span>
+            <span class="label">📍 生研中心</span><span class="value">四川省德阳市广汉市和兴镇红安村8社</span>
+            <span class="label">💡 采购对接</span><span class="value">建议拨打400热线转采购部，或电邮至 cuihongsp@163.com</span>
+        </div>
+        <div class="action-links">
+            <a class="btn btn-primary" href="https://www.sichuancuihong.com" target="_blank">访问官网</a>
+        </div>
+    </div>
+
+    <!-- 7. 幺麻子食品 -->
+    <div class="company-card">
+        <div class="top-row">
+            <span class="rank-badge">7</span>
+            <span class="company-name">幺麻子食品</span>
+            <span class="brand-tag">🏷️ 幺麻子</span>
+            <span class="stock-tag">📈 874322.NEEQ</span>
+        </div>
+        <div class="desc">藤椒油龙头，<strong>花椒麻味原料核心采购商</strong>，以高品质花椒为产品灵魂，采购标准严苛。</div>
+        <div class="info-grid">
+            <span class="label">📞 全国热线</span><span class="value">028-37494888</span>
+            <span class="label">📧 邮箱</span><span class="value">admin@yaomazi.hzqiye.ntesmail.com</span>
+            <span class="label">🌐 官网</span><span class="value"><a href="https://www.yaomazi.com" target="_blank">www.yaomazi.com</a></span>
+            <span class="label">📍 地址</span><span class="value">四川省洪雅县止戈镇五龙路15号</span>
+            <span class="label">💡 采购对接</span><span class="value">建议拨打热线028-37494888转采购部</span>
+        </div>
+        <div class="action-links">
+            <a class="btn btn-primary" href="https://www.yaomazi.com/news-contact.html" target="_blank">联系页面</a>
+            <a class="btn btn-outline" href="https://www.yaomazi.com" target="_blank">访问官网</a>
+        </div>
+    </div>
+
+    <!-- 8. 红九九食品 -->
+    <div class="company-card">
+        <div class="top-row">
+            <span class="rank-badge">8</span>
+            <span class="company-name">红九九食品</span>
+            <span class="brand-tag">🏷️ 红99</span>
+        </div>
+        <div class="desc">重庆老牌火锅底料企业，"红99"品牌家喻户晓。<strong>火锅底料花椒用量巨大</strong>，二十余年行业积累。</div>
+        <div class="info-grid">
+            <span class="label">📞 电话</span><span class="value">023-68545618 / 023-68546108</span>
+            <span class="label">📠 传真</span><span class="value">023-68546308 / 023-68546199</span>
+            <span class="label">🌐 官网</span><span class="value"><a href="http://www.cqhjj.com" target="_blank">www.cqhjj.com</a></span>
+            <span class="label">📍 地址</span><span class="value">重庆市大渡口区钓鱼嘴</span>
+            <span class="label">💡 采购对接</span><span class="value">建议直接拨打总机转采购部</span>
+        </div>
+        <div class="action-links">
+            <a class="btn btn-primary" href="http://www.cqhjj.com" target="_blank">访问官网</a>
+        </div>
+    </div>
+
+    <!-- 9. 安记食品 -->
+    <div class="company-card">
+        <div class="top-row">
+            <span class="rank-badge">9</span>
+            <span class="company-name">安记食品</span>
+            <span class="brand-tag">🏷️ AnKee</span>
+            <span class="stock-tag">📈 603696.SH</span>
+        </div>
+        <div class="desc">A股上市调味品企业，产品涵盖花椒粉等香辛料。<strong>有稳定的花椒原料供应链需求</strong>，全国多地分公司就近采购。</div>
+        <div class="info-grid">
+            <span class="label">📞 总机</span><span class="value">0595-22499666</span>
+            <span class="label">📞 业务合作</span><span class="value">0595-22499666-8000</span>
+            <span class="label">📧 邮箱</span><span class="value">ankee@anjifood.com</span>
+            <span class="label">🌐 官网</span><span class="value"><a href="https://www.anjifood.com" target="_blank">www.anjifood.com</a></span>
+            <span class="label">📍 地址</span><span class="value">福建省泉州市经济技术开发区4-9A</span>
+            <span class="label">📞 成都分公司</span><span class="value">18005066612（覆盖川渝地区业务）</span>
+            <span class="label">💡 采购对接</span><span class="value">建议拨打业务合作分机8000，或联系成都分公司</span>
+        </div>
+        <div class="action-links">
+            <a class="btn btn-primary" href="https://www.anjifood.com/business.html" target="_blank">业务合作页</a>
+            <a class="btn btn-outline" href="https://www.anjifood.com" target="_blank">访问官网</a>
+        </div>
+    </div>
+
+    <!-- 10. 五丰黎红 -->
+    <div class="company-card">
+        <div class="top-row">
+            <span class="rank-badge">10</span>
+            <span class="company-name">五丰黎红食品</span>
+            <span class="brand-tag">🏷️ 五丰黎红</span>
+        </div>
+        <div class="desc">华润五丰旗下，<strong>花椒油行业第一品牌</strong>，位于"中国花椒之乡"汉源县。花椒核心原料年消耗量巨大，对花椒品质有深度理解。</div>
+        <div class="info-grid">
+            <span class="label">📞 电话</span><span class="value">0835-4389318</span>
+            <span class="label">🌐 官网</span><span class="value"><a href="https://www.wflhfood.com" target="_blank">www.wflhfood.com</a></span>
+            <span class="label">📍 地址</span><span class="value">四川省雅安市汉源县（中国花椒之乡）</span>
+            <span class="label">💡 采购对接</span><span class="value">可以直接拨打0835-4389318沟通原料供应</span>
+        </div>
+        <div class="action-links">
+            <a class="btn btn-primary" href="https://www.wflhfood.com" target="_blank">访问官网</a>
+        </div>
+    </div>
+
+    <!-- ============ MORE IMPORTANT COMPANIES ============ -->
+    <h2 class="section-title">📋 其他重要潜在客户</h2>
+    <p class="section-desc">同样具有大量花椒采购需求的知名企业，建议一并接触</p>
+
+    <!-- 更多企业卡片 -->
+    <div class="company-card">
+        <div class="top-row">
+            <span class="company-name">重庆桥头火锅调料</span>
+            <span class="brand-tag">🏷️ 桥头</span>
+        </div>
+        <div class="desc">重庆老字号火锅底料企业，<strong>每年花椒采购量可观</strong>。</div>
+        <div class="info-grid">
+            <span class="label">📍 地址</span><span class="value">重庆市巴南区南泉镇白鹤村8社</span>
+            <span class="label">💡 采购对接</span><span class="value">建议通过客服或招商平台联系</span>
+        </div>
+        <div class="action-links">
+            <a class="btn btn-outline" href="https://www.foodtalks.cn/company/chongqing_qiao_tou_huo_guo" target="_blank">企业信息</a>
+        </div>
+    </div>
+
+    <div class="company-card">
+        <div class="top-row">
+            <span class="company-name">上海味好美食品</span>
+            <span class="brand-tag">🏷️ McCormick</span>
+        </div>
+        <div class="desc">全球最大香辛料公司，<strong>花椒粉及花椒提取物重要采购方</strong>。</div>
+        <div class="info-grid">
+            <span class="label">📞 消费者热线</span><span class="value">800-820-1877 / 400-630-3888</span>
+            <span class="label">🌐 官网</span><span class="value"><a href="http://www.mccormick.com.cn" target="_blank">www.mccormick.com.cn</a></span>
+            <span class="label">💡 采购对接</span><span class="value">建议拨打热线转采购部，或通过官网联系</span>
+        </div>
+    </div>
+
+    <div class="company-card">
+        <div class="top-row">
+            <span class="company-name">友嘉食品</span>
+            <span class="brand-tag">🏷️ 友加</span>
+        </div>
+        <div class="desc">四川知名调味品品牌，"友加"牌花椒粉、花椒油覆盖全国。</div>
+        <div class="info-grid">
+            <span class="label">📞 电话</span><span class="value">028-88322358</span>
+            <span class="label">🌐 官网</span><span class="value"><a href="http://www.youjiafood.com" target="_blank">www.youjiafood.com</a></span>
+            <span class="label">📍 地址</span><span class="value">四川省成都市大邑县晋原镇兴业四路6号</span>
+            <span class="label">💡 采购对接</span><span class="value">直接拨打电话联系采购事宜</span>
+        </div>
+    </div>
+
+    <div class="company-card">
+        <div class="top-row">
+            <span class="company-name">山东每日良食（鸿兴源）</span>
+            <span class="brand-tag">🏷️ 鸿兴源</span>
+        </div>
+        <div class="desc">山东大型调味品企业，百年品牌"鸿兴源"。<strong>香辛料需求广泛</strong>。</div>
+        <div class="info-grid">
+            <span class="label">📞 电话</span><span class="value">0534-7261033</span>
+            <span class="label">📧 邮箱</span><span class="value">644362389@qq.com</span>
+            <span class="label">🌐 官网</span><span class="value"><a href="http://www.hxy1913.com" target="_blank">www.hxy1913.com</a></span>
+            <span class="label">📍 地址</span><span class="value">山东省德州市禹城市高新区</span>
+        </div>
+    </div>
+
+    <div class="company-card">
+        <div class="top-row">
+            <span class="company-name">川珍实业</span>
+            <span class="brand-tag">🏷️ 川珍</span>
+        </div>
+        <div class="desc">四川大型食用菌及香辛料企业，花椒产品系列覆盖全国商超。</div>
+        <div class="info-grid">
+            <span class="label">📞 电话</span><span class="value">0839-7402188</span>
+            <span class="label">📱 手机</span><span class="value">13908125394（郝彬先生）</span>
+            <span class="label">📍 地址</span><span class="value">四川省广元市青川县木鱼镇</span>
+        </div>
+    </div>
+
+    <div class="company-card">
+        <div class="top-row">
+            <span class="company-name">杞参食品</span>
+            <span class="brand-tag">🏷️ 杞参</span>
+        </div>
+        <div class="desc">东北大型调味品企业，产品涵盖花椒等各类香辛料，覆盖北方市场。</div>
+        <div class="info-grid">
+            <span class="label">📞 电话</span><span class="value">15714310323</span>
+            <span class="label">📍 地址</span><span class="value">长春市宽城区凯旋北路10368A号</span>
+        </div>
+    </div>
+
+    <!-- ============ SUPPLY CHAIN PLATFORMS ============ -->
+    <h2 class="section-title">🔗 关键供应链平台（可直接对接多个买家）</h2>
+    <p class="section-desc">通过这些平台，一次入驻即可覆盖大量潜在客户</p>
+
+    <div class="b2b-grid">
+        <div class="b2b-card">
+            <h4>蜀海供应链</h4>
+            <p>海底捞旗下采购平台，对接数千家餐饮企业。花椒需求巨大。</p>
+            <p>📞 400-696-8876</p>
+            <p>📧 shscb@shuhaisc.com</p>
+            <a href="https://www.shuhaisc.com" target="_blank">www.shuhaisc.com →</a>
+        </div>
+        <div class="b2b-card">
+            <h4>惠农网</h4>
+            <p>中国最大农产品B2B平台，每日有花椒求购信息，直接对接批发商。</p>
+            <a href="https://www.cnhnb.com/p/huajiao/" target="_blank">花椒专区 →</a>
+        </div>
+        <div class="b2b-card">
+            <h4>花椒网 (huajiao.cn)</h4>
+            <p>花椒行业垂直平台，有专门供求信息板块，精准对接行业买家。</p>
+            <a href="https://www.huajiao.cn" target="_blank">www.huajiao.cn →</a>
+        </div>
+        <div class="b2b-card">
+            <h4>美菜网</h4>
+            <p>中国最大餐饮供应链平台之一，覆盖全国百万餐厅。</p>
+            <a href="https://meicai.cn" target="_blank">meicai.cn →</a>
+        </div>
+        <div class="b2b-card">
+            <h4>FoodTalks食品平台</h4>
+            <p>食品行业B2B供需平台，调味品企业聚集，可直接发布供应信息。</p>
+            <a href="https://www.foodtalks.cn" target="_blank">www.foodtalks.cn →</a>
+        </div>
+        <div class="b2b-card">
+            <h4>惠椒网</h4>
+            <p>花椒行业专业资讯与交易平台，精准花椒产业人群。</p>
+            <a href="https://www.huijiaowang.com" target="_blank">www.huijiaowang.com →</a>
+        </div>
+    </div>
+
+    <!-- ============ TIPS ============ -->
+    <h2 class="section-title">🎯 对接攻略 & 落地建议</h2>
+
+    <div class="tips-box">
+        <h3>📌 第一步：准备"三件套"</h3>
+        <ul>
+            <li><strong>样品包：</strong>精选特级风陵渡大红袍花椒，密封小样（500g），附质检报告</li>
+            <li><strong>公司简介：</strong>一页纸，写明产地优势、产量规模、品控标准、合作案例</li>
+            <li><strong>报价单：</strong>含不同等级（特级/一级/二级）的价格、起订量、包装方式</li>
+        </ul>
+    </div>
+
+    <div class="tips-box" style="margin-top:16px;">
+        <h3>📌 第二步：分梯度触达</h3>
+        <ul>
+            <li><strong>电话优先：</strong>直接拨打各公司总机，说"我是山西芮城风陵渡花椒产地直供，想联系采购部"</li>
+            <li><strong>邮件跟进：</strong>电话后发送正式合作邮件，附上公司简介和报价单</li>
+            <li><strong>寄送样品：</strong>意向明确后立即寄送样品，好的花椒自己会说话</li>
+        </ul>
+    </div>
+
+    <div class="tips-box" style="margin-top:16px;">
+        <h3>📌 第三步：走平台 + 参加展会</h3>
+        <ul>
+            <li><strong>入驻惠农网/花椒网：</strong>免费发布供应信息，吸引主动询盘</li>
+            <li><strong>参加行业展会：</strong>中国调味品展（每年11月广交会同期）、成都糖酒会（每年3月）</li>
+            <li><strong>对接当地政府：</strong>芮城县政府有农产品推广部门，可协助对接大型采购商</li>
+        </ul>
+    </div>
+
+    <div class="tips-box" style="margin-top:16px;">
+        <h3>📌 第四步：用活本地资源</h3>
+        <ul>
+            <li>风陵渡已有<strong>卫红花椒购销部</strong>、<strong>旭创花椒购销中心</strong>等本地商户，可以先抱团接大单</li>
+            <li>在<a href="https://www.huajiao.cn" style="color:#C0392B;">花椒网</a>上发布供应信息，标题注明"风陵渡大红袍花椒产地直销"</li>
+            <li>惠农网上已有风陵渡花椒报价（24元/斤起），可以据此参考定价</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <p>风陵渡大红袍花椒 · 大客户调研报告</p>
+        <p>数据调研日期：2026年7月 | 信息仅供参考，联系方式请以企业官网最新公布为准</p>
+        <p style="margin-top: 8px; opacity: 0.6;">祝风陵渡花椒走出家乡，香飘全国！🌶️</p>
+    </div>
 
 </div>
-
-<footer>
-  <p>报告生成：2026年6月9日 · 山西芮城风陵渡 · 惠众农业发展有限公司</p>
-  <p style="margin-top:4px;">数据来源：惠农网、报告大厅、虎嗅、新华指数、Counterpoint等行业公开数据</p>
-  <p style="margin-top:4px;">价格以实际交易为准 · 建议以检测报告确认产品特性</p>
-</footer>
-
 </body>
 </html>
